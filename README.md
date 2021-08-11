@@ -12,6 +12,7 @@ This Is Front End bike shop inventory (CRUD). It has several features like login
 - Run composer install
 - Copy file .env.example and rename it to .env
 - Edit value DB_DATABASE, DB_USERNAME, DB_PASSWORD
+- Run php artisan key:generate
 
 ### Run Development Server
 Make sure different with Back End
