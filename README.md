@@ -5,17 +5,20 @@ This Is Front End bike shop inventory (CRUD). It has several features like login
 - Laravel/Lumen (7.0)
 
 ### First Config
-- Install XAMPP for PHP 7.4
-- Download/pull this project to C:\xampp\htdocs\
+- Install Laragon
+- Download/pull this project to C:\laragon\www
 - Open this project with cd BikeShopInventoryLumen
 - Install composer
 - Run composer install
+- Download phpmyadmin and extract
+- copy folder phpmyadmin to C:\laragon\etc\apps and rename it as phpMyAdmin
+- Start Laragon
 - Copy file .env.example and rename it to .env
 - Edit value DB_DATABASE, DB_USERNAME, DB_PASSWORD
 - Run php artisan key:generate
 
 ### Run Development Server
-Make sure different with Back End
+Make sure different PORT with Back End
 php -S localhost:PORT -t public 
 
 ### Run In Broswer
