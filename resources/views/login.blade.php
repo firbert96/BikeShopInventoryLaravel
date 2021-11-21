@@ -56,6 +56,7 @@
                 var email = $('#email').val();
                 var password = $('#password').val();
                 var _token = $('#token').val();
+                var api_url = "{{env('API_URL')}}";
                 $.ajax({
                     url:'/login',
                     type:'POST',                          

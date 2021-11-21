@@ -82,8 +82,9 @@
                     var email = $('#email').val();
                     var phone = $('#phone').val();
                     var _token = $('#token').val();
+                    var api_url = "{{env('API_URL')}}";
                     $.ajax({
-                        url:'http://localhost:8000/users',
+                        url:api_url+'/users',
                         type:'PUT',                          
                         data:{
                             uuid,

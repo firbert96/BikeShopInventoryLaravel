@@ -76,9 +76,10 @@
                     var currentPassword = $('#currentPassword').val();
                     var newPassword = $('#newPassword').val();
                     var repeatPassword = $('#repeatPassword').val();
+                    var api_url = "{{env('API_URL')}}";
                     if(repeatPassword === newPassword){
                         $.ajax({
-                            url:'http://localhost:8000/users/changePassword',
+                            url:api_url+'/users/changePassword',
                             type:'PUT',                          
                             data:{
                                 uuid,

@@ -63,9 +63,10 @@
                 var password = $('#password').val();
                 var repeat_password = $('#repeat_password').val();
                 var _token = $('#token').val();
+                var api_url = "{{env('API_URL')}}";
                 if(password === repeat_password){
                     $.ajax({
-                        url:'http://localhost:8000/users',
+                        url:api_url+'/users',
                         type:'POST',                          
                         dataType: 'json',
                         data:{

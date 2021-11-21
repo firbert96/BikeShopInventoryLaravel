@@ -56,8 +56,9 @@
                 var product_name = $('#product_name').val();
                 var product = $('input[name="product"]:checked').val();
                 var _token = $('#token').val();
+                var api_url = "{{env('API_URL')}}";
                 $.ajax({
-                    url:'http://localhost:8000/inventory/editProduct',
+                    url:api_url+'/inventory/editProduct',
                     type:'PUT',                          
                     data:{
                         uuid,

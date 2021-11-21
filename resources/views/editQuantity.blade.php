@@ -60,9 +60,9 @@
                 var changer_name = $('#changer_name').val();
                 var changer = $('input[name="changer"]:checked').val();
                 var _token = $('#token').val();
-                
+                var api_url = "{{env('API_URL')}}";
                 $.ajax({
-                    url:'http://localhost:8000/inventory_flows',
+                    url:api_url+'/inventory_flows',
                     type:'POST',                          
                     dataType: 'json',
                     data:{
@@ -76,7 +76,7 @@
                     success:function(response){
                         console.log(response);
                         $.ajax({
-                            url:'http://localhost:8000/inventory/editQuantity',
+                            url:api_url+'/inventory/editQuantity',
                             type:'PUT',                          
                             data:{
                                 inventory_uuid,

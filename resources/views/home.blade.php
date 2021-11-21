@@ -235,9 +235,10 @@
         function pageLoad(page){
             let newPage = page;
             let input_search = $('#input_search').val();
+            var api_url = "{{env('API_URL')}}";
             $.ajax({
                 type:"GET",
-                url:"http://localhost:8000/inventory/showInventory?page="+newPage+"&input_search="+input_search,
+                url:api_url+"/inventory/showInventory?page="+newPage+"&input_search="+input_search,
                 success: function(response)
                 {
                     let responseLength = response.total;
@@ -326,6 +327,7 @@
                 e.preventDefault();
                 let uuid = $(this).prop('id');
                 let _token = $('#token').val();
+                var api_url = "{{env('API_URL')}}";
                 Swal.fire({
                     title: 'Are you sure?',
                     text: "You won't be able to revert this!",
@@ -339,7 +341,7 @@
                     if (result.value) {
                         $.ajax({
                             type: "DELETE",
-                            url: 'http://localhost:8000/inventory?uuid='+uuid,
+                            url: api_url+'/inventory?uuid='+uuid,
                             data:{
                                 _token
                             },

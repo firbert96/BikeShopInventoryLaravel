@@ -315,9 +315,10 @@
         function pageLoadBuyer(page){
             let newPage = page;
             let input_search_buyer = $('#input_search_buyer').val();
+            var api_url = "{{env('API_URL')}}";
             $.ajax({
                 type:"GET",
-                url:"http://localhost:8000/inventory_flows/showBuyer?page="+newPage+"&input_search_buyer="+input_search_buyer,
+                url:api_url+"/inventory_flows/showBuyer?page="+newPage+"&input_search_buyer="+input_search_buyer,
                 success: function(response)
                 {
                     let responseLength = response.total;
@@ -392,9 +393,10 @@
         function pageLoadSupplier(page){
             let newPage = page;
             let input_search_supplier = $('#input_search_supplier').val();
+            var api_url = "{{env('API_URL')}}";
             $.ajax({
                 type:"GET",
-                url:"http://localhost:8000/inventory_flows/showSupplier?page="+newPage+"&input_search_supplier="+input_search_supplier,
+                url:api_url+"/inventory_flows/showSupplier?page="+newPage+"&input_search_supplier="+input_search_supplier,
                 success: function(response)
                 {
                     let responseLength = response.total;
@@ -467,9 +469,10 @@
         }
 
         function pageLoadDetailProduct(){
+            var api_url = "{{env('API_URL')}}";
             $.ajax({
                 type:"GET",
-                url:"http://localhost:8000/inventory/showDetailProduct",
+                url:api_url+"/inventory/showDetailProduct",
                 success: function(response)
                 {
                     $('#tabProduct').html('');
@@ -517,7 +520,7 @@
                         );
                         $.ajax({
                             type:"GET",
-                            url:"http://localhost:8000/inventory_flows/showDetailProduct?uuid="+uuid,
+                            url:api_url+"/inventory_flows/showDetailProduct?uuid="+uuid,
                             success:function(responses){
                                 $.each(responses, function(keys, vals){
                                     changer = (vals.changer == 0 ) ? 'Buyer' : 'Supplier';
