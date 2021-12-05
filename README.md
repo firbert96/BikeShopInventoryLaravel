@@ -9,9 +9,7 @@ This Is Front End bike shop inventory (CRUD). It has several features like login
 - Download/pull this project to C:\laragon\www
 - Open this project with cd BikeShopInventoryLumen
 - Install composer
-- Run composer install
-- Download phpmyadmin and extract
-- copy folder phpmyadmin to C:\laragon\etc\apps and rename it as phpMyAdmin
+- Run composer install in Terminal's Laragon
 - Start Laragon
 - Copy file .env.example and rename it to .env
 - Edit value DB_DATABASE, DB_USERNAME, DB_PASSWORD
