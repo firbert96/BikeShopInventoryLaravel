@@ -1,4 +1,4 @@
-### Front End(Laravel/Blade View) Bike Shop Inventory (For Educational Purpose)
+# Front End(Laravel/Blade View) Bike Shop Inventory (For Educational Purpose)
 This Is Front End bike shop inventory (CRUD). It has several features like login, register, logout, edit user, create product, edit product, delete product, show all list product, and edit quantity. Especially for edit quantity, you increase quantity products as supplier and decrease quantity products as buyer. You also can see Inventory quantity flow buyer and supplier.
 
 ### Programming Language
@@ -14,11 +14,10 @@ This Is Front End bike shop inventory (CRUD). It has several features like login
 - Copy file .env.example and rename it to .env
 - Edit value DB_DATABASE, DB_USERNAME, DB_PASSWORD
 - Edit port value API_URL in .env
-- Run php artisan key:generate
 
 ### Run Development Server
-Make sure different PORT with Back End
-php -S localhost:PORT -t public 
+Make sure different PORT with Back End 
+php artisan serve --port=PORT
 
 ### Run In Broswer
 http://localhost:PORT/
