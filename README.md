@@ -17,7 +17,7 @@ This Is Front End bike shop inventory (CRUD). It has several features like login
 
 ### Run Development Server
 Make sure different PORT with Back End 
-php artisan serve --port=PORT
+- php artisan serve --port=PORT
 
 ### Run In Broswer
 http://localhost:PORT/
@@ -27,7 +27,7 @@ Firbert Oktariko
 
 ### Big Thanks 
 I am using Template HTML this github project.
-https://github.com/davidtmiller
-https://github.com/StartBootstrap/startbootstrap-sb-admin-2 
+- https://github.com/davidtmiller
+- https://github.com/StartBootstrap/startbootstrap-sb-admin-2 
 
 ### Hopefully this project can help people to understand basic CRUD using Front End(Laravel/Blade View)
